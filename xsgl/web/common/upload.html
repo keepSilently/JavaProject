@@ -1,0 +1,38 @@
+<div class="upload">
+    <h1>从excel导入数据
+
+        <span class="glyphicon glyphicon-remove" ng-click="closeWindow()"></span>
+    </h1>
+    <div class="content">
+
+        <div class="divFile" ng-click="openFile()">
+            <h1>{{fileName==undefined?'请点击选择上传的excel文件':fileName}}</h1>
+            <input type="file"  accept="application/vnd.ms-excel" id="xmlFile" nv-file-select="" uploader="uploader"
+                   onchange='angular.element(this).scope().fileNameChanged(this)' style="display:none"/>
+        </div>
+        <div class="progress">
+            <div></div>
+        </div>
+
+
+        <div class="message" ng-bind="message">
+
+        </div>
+        <div class="import" ng-click="start()">点击开始导入数据</div>
+    </div>
+    <div>
+
+
+        <p>
+
+            <a class="download" ng-href="{{exportExcelUri}}">下载excel模板</a>
+
+        </p>
+        <p>
+            <button type="button" ng-click="closeWindow()">关闭</button>
+
+        </p>
+
+    </div>
+</div>
+<div class="big"></div>

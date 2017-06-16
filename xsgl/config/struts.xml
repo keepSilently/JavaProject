@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+        <!--开发模式-->
+
+    <constant name="struts.devMode" value="true" />
+    <constant value="UTF-8" name="struts.i18n.encoding"/>
+    <package name="base-struts" extends="struts-default" namespace="/" strict-method-invocation="false">
+
+    </package>
+    <include file="cn/ggs/core/config/student-struts.xml"></include>
+    <include file="cn/ggs/core/config/user-struts.xml"></include>
+    <include file="cn/ggs/login/config/login-struts.xml"></include>
+    <include file="cn/ggs/core/config/class-struts.xml"></include>
+</struts>

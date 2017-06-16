@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.tab {
+  z-index: 101;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -210px;
+  background: #fff;
+  width: 600px;
+  height: 420px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 40px rgba(0, 0, 0, 0.5);
+}
+.tab > h1 {
+  font-size: 15px;
+  font-weight: normal;
+  height: 39px;
+  border-bottom: 1px solid #ccc;
+  line-height: 39px;
+  padding: 0 14px;
+}
+.tab > h1 span {
+  font-size: 20px;
+  line-height: 39px;
+  float: right;
+  cursor: pointer;
+}
+.tab > h1 span:hover {
+  color: red;
+}
+.tab > div:last-child {
+  height: 45px;
+  background: #f5f5f5;
+  border-radius: 0 0 10px 10px ;
+}
+.tab > div:last-child p {
+  margin-top: 6px;
+}
+.tab > div:last-child p:first-child {
+  float: left;
+}
+.tab > div:last-child p:first-child label,
+.tab > div:last-child p:first-child input {
+  cursor: pointer;
+}
+.tab > div:last-child p:last-child {
+  float: right;
+  padding-right: 10px;
+  padding-left: 17px;
+}
+.tab > div:last-child p:last-child button {
+  width: 66px;
+  height: 29px;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tab > div:last-child p:last-child button:first-child {
+  background: #5cb85c;
+}
+.tab > div:last-child p:last-child button:first-child:hover {
+  color: #ccc;
+  background: #5cb99c;
+}
+.tab > div:last-child p:last-child button:last-child {
+  background: #d9534f;
+}
+.tab > div:last-child p:last-child button:last-child:hover {
+  color: #ccc;
+  background: #d9599f;
+}
+.tab .content {
+  height: 336px;
+}
+.tab .content input[type="text"] {
+  padding-left: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.tab .content input[type="text"]:focus {
+  border: 1px  solid #35b76f;
+}
+.tab .content select,
+.tab .content input {
+  width: 200px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.tab .content button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.tab .TabNav {
+  width: 546px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab .TabNav ul li {
+  float: left;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#ededed));
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  width: 180px;
+  text-align: center;
+  margin-left: -1px;
+  position: relative;
+  cursor: pointer;
+}
+.tab .TabCon {
+  position: absolute;
+  left: -1px;
+  top: 30px;
+  border-top: none;
+  width: 543px;
+  height: 280px;
+  margin-top: 20px;
+}
+.tab .TabNav ul li.active {
+  background: #FFFFFF;
+  border-bottom: none;
+}
+.tab .TabCon button {
+  width: 66px;
+  height: 29px;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #5cb85c;
+}
+.tab .TabCon div {
+  width: 80%;
+  margin: 0 auto;
+}
+.big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}

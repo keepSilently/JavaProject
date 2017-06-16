@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.ggs.core.entity.User" table="t_user" >
+        <id name="userId" type="java.lang.String">
+            <column name="user_id" length="32" >
+            </column>
+            <generator class="uuid.hex" ></generator>
+        </id>
+
+        <property name="name" type="java.lang.String" length="32">
+            <column name="name"  />
+        </property>
+        <property name="img" type="java.lang.String" length="64">
+            <column name="img"  />
+        </property>
+        <property name="password" type="java.lang.String" length="32">
+            <column name="password"   />
+        </property>
+        <property name="permission" type="java.lang.String"  length="32" >
+            <column name="permission"   />
+        </property>
+    </class>
+</hibernate-mapping>

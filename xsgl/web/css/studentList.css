@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.list {
+  width: 1200px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.list h2 {
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 32px;
+  color: #666;
+  height: 32px;
+  border-bottom: 1px solid #ccc;
+}
+.list > .listHeader {
+  height: 62px;
+  border-bottom: 1px solid #ccc;
+}
+.list > .listHeader div:first-child {
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 16px;
+}
+.list > .listHeader div:first-child input {
+  width: 200px;
+  height: 27px;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 4px;
+  border: 0;
+  border: 1px solid #ccc;
+}
+.list > .listHeader div:first-child button {
+  width: 65px;
+  height: 28px;
+  color: #fff;
+  background: #5965b1;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.list > .listHeader div:first-child button span {
+  margin-right: 5px;
+}
+.list > .listHeader div:first-child button:hover {
+  background: #323a82;
+  color: aliceblue;
+}
+.list > .listHeader div:first-child button:focus {
+  background: #323a82;
+  color: aliceblue;
+}
+.list > .listHeader div:last-child {
+  height: 29px;
+  float: right;
+  margin: 16px 10px ;
+  border: 1px solid #ccc;
+  border-radius: 5px ;
+}
+.list > .listHeader div:last-child a {
+  height: 29px;
+  display: block;
+  cursor: pointer;
+  color: #333;
+  border: 0;
+  border-left: 1px solid #ccc;
+  background: #fff;
+  line-height: 29px;
+  text-align: center;
+  float: left;
+  padding: 0 15px;
+}
+.list > .listHeader div:last-child a span {
+  color: #333;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.list > .listHeader div:last-child a:first-child {
+  margin-left: 0;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+}
+.list > .listHeader div:last-child a:last-child {
+  border-radius: 0 5px  5px 0;
+}
+.list > .listHeader div:last-child a:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.list > .listHeader div:last-child a:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.list > .listHeader div:last-child a:active {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.list li label::before {
+  width: 20px;
+  height: 20px;
+}
+.list .baseUL li {
+  border-right: 1px solid #ccc;
+}
+.list .baseUL li:last-child {
+  border: 0;
+}
+.list .baseUL li:first-child {
+  cursor: pointer;
+}
+.list ul {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.list ul li {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  width: 100px;
+}
+.list ul li:first-child {
+  width: 60px;
+}
+.list ul li:first-child span {
+  line-height: 40px;
+  text-align: center;
+}
+.list ul li:nth-child(2),
+.list ul li:nth-child(3),
+.list ul li:nth-child(5),
+.list ul li:nth-child(4),
+.list ul li:nth-child(9) {
+  width: 150px;
+}
+.list ul:not(.baseUL):hover {
+  background: #5965b1 ;
+  color: #fff;
+}
+.list ul:not(.baseUL) {
+  cursor: pointer;
+}
+.glyphicon-unchecked {
+  color: #ccc;
+  font-size: 16px;
+}
+.glyphicon-check {
+  color: #35b76f;
+  font-size: 16px;
+}
+.tx {
+  text-align: left;
+}
+.tx span {
+  float: left;
+  margin-left: 10px;
+}
+.tx img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 5px 10px;
+}
+@keyframes slideToRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideToRight {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideToRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+.studentList.ng-enter {
+  position: absolute;
+  transition: 1s all linear;
+  -moz-transition: 1s all linear;
+  -webkit-transition: 1s all linear;
+}
+.studentList.ng-enter {
+  -webkit-animation: slideToRight 1s both linear;
+  -moz-animation: slideToRight 1s both linear;
+  animation: slideToRight 1s both linear;
+}
+.success {
+  color: #35b76f;
+}
+.error {
+  color: red;
+}

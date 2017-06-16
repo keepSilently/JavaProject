@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.ggs.core.entity.Profession" table="t_profession" >
+        <id name="professionId" type="java.lang.String">
+            <column name="profession_id" length="32" />
+            <generator class="uuid.hex"></generator>
+        </id>
+        <property name="professionName" type="java.lang.String"  length="32">
+            <column name="profession_name"  />
+        </property>
+        <set name="department" cascade="save-update" inverse="true">
+            <key>
+                <column name="profession_id"/>
+            </key>
+            <one-to-many  class="cn.ggs.core.entity.Department"/>
+        </set>
+    </class>
+</hibernate-mapping>

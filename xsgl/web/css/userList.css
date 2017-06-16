@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  overflow: hidden;
+}
+.userList {
+  width: 1200px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.userList h2 {
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 32px;
+  color: #666;
+  height: 32px;
+  border-bottom: 1px solid #ccc;
+}
+.userList > .listHeader {
+  height: 62px;
+  border-bottom: 1px solid #ccc;
+}
+.userList > .listHeader div:first-child {
+  height: 30px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 16px;
+}
+.userList > .listHeader div:first-child input {
+  width: 200px;
+  height: 27px;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 4px;
+  border: 0;
+  border: 1px solid #ccc;
+}
+.userList > .listHeader div:first-child button {
+  width: 65px;
+  height: 28px;
+  color: #fff;
+  background: #5965b1;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.userList > .listHeader div:first-child button span {
+  margin-right: 5px;
+}
+.userList > .listHeader div:first-child button:hover {
+  background: #323a82;
+  color: aliceblue;
+}
+.userList > .listHeader div:first-child button:focus {
+  background: #323a82;
+  color: aliceblue;
+}
+.userList > .listHeader div:last-child {
+  height: 29px;
+  float: right;
+  margin: 16px 10px ;
+  border: 1px solid #ccc;
+  border-radius: 5px ;
+}
+.userList > .listHeader div:last-child a {
+  height: 29px;
+  display: block;
+  cursor: pointer;
+  color: #333;
+  border: 0;
+  border-left: 1px solid #ccc;
+  background: #fff;
+  line-height: 29px;
+  text-align: center;
+  float: left;
+  padding: 0 15px;
+}
+.userList > .listHeader div:last-child a span {
+  color: #333;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.userList > .listHeader div:last-child a:first-child {
+  margin-left: 0;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+}
+.userList > .listHeader div:last-child a:last-child {
+  border-radius: 0 5px  5px 0;
+}
+.userList > .listHeader div:last-child a:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.userList > .listHeader div:last-child a:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.userList > .listHeader div:last-child a:active {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.userList li label::before {
+  width: 20px;
+  height: 20px;
+}
+.userList .baseUL li {
+  border-right: 1px solid #ccc;
+}
+.userList .baseUL li:last-child {
+  border: 0;
+}
+.userList .baseUL li:first-child {
+  cursor: pointer;
+}
+.userList ul {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.userList ul li {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  width: 100px;
+}
+.userList ul li:first-child {
+  width: 100px;
+}
+.userList ul li:first-child span {
+  line-height: 40px;
+  text-align: center;
+}
+.userList ul li:nth-child(2),
+.userList ul li:nth-child(3),
+.userList ul li:nth-child(4),
+.userList ul li:nth-child(5) {
+  width: 250px;
+}
+.userList ul:not(.baseUL):hover {
+  background: #5965b1 ;
+  color: #fff;
+}
+.userList ul:not(.baseUL) {
+  cursor: pointer;
+}
+.tx {
+  text-align: left;
+}
+.tx span {
+  float: left;
+  margin-left: 10px;
+}
+.tx img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin: 5px 10px;
+}
+@keyframes slideToRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideToRight {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideToRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+.userList.ng-enter {
+  position: absolute;
+  transition: 1s all linear;
+  -moz-transition: 1s all linear;
+  -webkit-transition: 1s all linear;
+}
+.userList.ng-enter {
+  -webkit-animation: slideToRight 1s both linear;
+  -moz-animation: slideToRight 1s both linear;
+  animation: slideToRight 1s both linear;
+}

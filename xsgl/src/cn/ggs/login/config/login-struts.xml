@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="home-action" extends="base-struts">
+
+        <action name="login" class="cn.ggs.login.action.LoginAction" method="login">
+            <result name="success" type="redirectAction">
+                <param name="actionName">home</param>
+            </result>
+
+            <result name="error">
+                /WEB-INF/jsp/login.jsp
+            </result>
+            <!--<result name="success" >-->
+            <!--/WEB-INF/jsp/base.jsp-->
+            <!--</result>-->
+        </action>
+
+        <action name="login_logout" class="cn.ggs.login.action.LoginAction" method="logout">
+            <result name="login">
+                /WEB-INF/jsp/login.jsp
+            </result>
+            <!--<result name="success" >-->
+            <!--/WEB-INF/jsp/base.jsp-->
+            <!--</result>-->
+        </action>
+
+        <action name="home" class="cn.ggs.login.action.LoginAction" method="home">
+            <result name="home">
+                /WEB-INF/jsp/base.jsp
+            </result>
+        </action>
+        <action name="pageUi" class="cn.ggs.login.action.LoginAction" method="pageUi">
+            <result name="page">
+                common/page.html
+            </result>
+        </action><action name="uploadUi" class="cn.ggs.login.action.LoginAction" method="uploadUi">
+            <result name="upload">
+                common/upload.html
+            </result>
+        </action>
+
+    </package>
+</struts>

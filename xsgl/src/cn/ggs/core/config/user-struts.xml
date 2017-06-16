@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="user-action" extends="base-struts,json-default" strict-method-invocation="false">
+
+        <action name="user_*" class="cn.ggs.core.action.UserAction" method="{1}">
+            <!--自动封装json数据为java对象-->
+            <interceptor-ref name="json"/>
+            <result name="{1}">/WEB-INF/jsp/user/{1}.jsp</result>
+            <result name="json" type="json"></result>
+            <result name="findUser" type="json"></result>
+            <result name="userJson" type="json">
+                <param name="includeProperties">
+                    status,user
+                </param>
+
+            </result>
+        </action>
+
+
+        <action name="user_addImg" class="cn.ggs.core.action.UserAction" method="addImg">
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status,headImgFileName
+                </param>
+            </result>
+
+        </action>
+
+        <action name="user_add" class="cn.ggs.core.action.UserAction" method="add">
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status
+                </param>
+            </result>
+        </action>
+
+        <action name="user_update" class="cn.ggs.core.action.UserAction" method="update">
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status
+                </param>
+            </result>
+        </action>
+
+        <action name="user_importExcel" class="cn.ggs.core.action.UserAction" method="importExcel">
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status,message
+                </param>
+            </result>
+        </action>
+
+        <action name="user_isUser" class="cn.ggs.core.action.UserAction" method="isUSer">
+            <!--自动封装json数据为java对象-->
+            <interceptor-ref name="json"/>
+            <result name="json" type="json"></result>
+        </action>
+
+        <action name="user_setSuperAdmin" class="cn.ggs.core.action.UserAction" method="setSuperAdmin">
+            <result name="success" type="redirectAction">
+                <param name="actionName">login</param>
+            </result>
+        </action>
+        
+        <action name="user_setSuperAdminUi" class="cn.ggs.core.action.UserAction" method="setSuperAdminUi">
+            <result name="success">
+                /WEB-INF/jsp/setAdmin.jsp
+            </result>
+
+        </action>
+    </package>
+</struts>

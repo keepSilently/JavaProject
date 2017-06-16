@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.upload {
+  z-index: 101;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -300px;
+  background: #fff;
+  width: 600px;
+  height: 420px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 40px rgba(0, 0, 0, 0.5);
+}
+.upload > h1 {
+  font-size: 15px;
+  font-weight: normal;
+  height: 39px;
+  border-bottom: 1px solid #ccc;
+  line-height: 39px;
+  padding: 0 14px;
+}
+.upload > h1 span {
+  font-size: 20px;
+  line-height: 39px;
+  float: right;
+  cursor: pointer;
+}
+.upload > h1 span:hover {
+  color: red;
+}
+.upload > div:last-child {
+  height: 45px;
+  background: #f5f5f5;
+  border-radius: 0 0 10px 10px ;
+}
+.upload > div:last-child p {
+  margin-top: 6px;
+}
+.upload > div:last-child p:first-child {
+  float: left;
+}
+.upload > div:last-child p:first-child label,
+.upload > div:last-child p:first-child input {
+  cursor: pointer;
+}
+.upload > div:last-child p:last-child {
+  float: right;
+  padding-right: 10px;
+  padding-left: 17px;
+}
+.upload > div:last-child p:last-child button {
+  width: 66px;
+  height: 29px;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.upload > div:last-child p:last-child button:first-child {
+  background: #5cb85c;
+}
+.upload > div:last-child p:last-child button:first-child:hover {
+  color: #ccc;
+  background: #5cb99c;
+}
+.upload > div:last-child p:last-child button:last-child {
+  background: #d9534f;
+}
+.upload > div:last-child p:last-child button:last-child:hover {
+  color: #ccc;
+  background: #d9599f;
+}
+.upload .content {
+  height: 336px;
+  padding-top: 10px ;
+}
+.upload .content .divFile {
+  background: #F5F5F5;
+  margin-top: 10px;
+  width: 80%;
+  margin: auto;
+  height: 100px;
+  border: dotted 3px lightgray;
+  cursor: pointer;
+}
+.upload .content h1 {
+  font-weight: normal;
+  text-align: center;
+  line-height: 100px;
+  font-size: 22px;
+}
+.upload .content .progress {
+  height: 20px;
+  width: 80%;
+  margin: 10px auto;
+  background: #f5f5f5;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 2px;
+}
+.upload .content .progress div {
+  width: 0%;
+  height: 16px;
+  border-radius: 4px;
+  background: #428bca;
+}
+.upload .import {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #5cb85c;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.upload .import:hover {
+  color: #ccc;
+  background: #5cb99c;
+}
+.upload .message {
+  border: dotted 3px lightgray;
+  background: #F5F5F5;
+  width: 80%;
+  height: 100px;
+  margin: 0  auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #5cb99c;
+}
+.upload .download {
+  display: block;
+  background: #5cb85c;
+  height: 25px;
+  line-height: 25px;
+  width: 150px;
+  text-align: center;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+.upload .download:hover {
+  color: #ccc;
+  background: #5cb99c;
+}

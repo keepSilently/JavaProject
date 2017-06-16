@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.ggs.core.entity.Student" table="t_student" >
+        <id name="studentId" type="java.lang.String" length="32">
+            <column name="student_id"/>
+            <generator class="uuid.hex"></generator>
+        </id>
+        <property name="gender" type="java.lang.Boolean">
+            <column name="gender"></column>
+        </property>
+        <property name="name" type="java.lang.String" length="32" >
+            <column name="name"  />
+        </property>
+        <property name="schoolId" type="java.lang.String"  length="64" >
+            <column name="school_id"  />
+        </property>
+        <property name="mobile" type="java.lang.String" length="32" >
+            <column name="mobile"   />
+        </property>
+        <property name="dormitory" type="java.lang.String" length="64">
+            <column name="dormitory"  />
+        </property>
+        <property name="dormitoryNum" type="java.lang.String"  length="32">
+            <column name="dormitory_num"  />
+        </property>
+        <property name="birthday" type="java.util.Date" length="10">
+            <column name="birthday" />
+        </property>
+        <property name="img" type="java.lang.String" length="64" >
+            <column name="img" />
+        </property>
+        <many-to-one name="classes" class="cn.ggs.core.entity.Classes"   cascade="save-update"  >
+            <column name="classes_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

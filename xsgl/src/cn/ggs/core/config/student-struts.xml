@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="student-action"  extends="base-struts,json-default" strict-method-invocation="false">
+
+        <action name="student_*" class="cn.ggs.core.action.StudentAction" method="{1}" >
+        <!--自动封装json数据为java对象-->
+        <interceptor-ref name="json"/>
+        <result  name="{1}">/WEB-INF/jsp/student/{1}.jsp</result>
+        <result  name="json" type="json"></result>
+         <result name="findStudent" type="json">
+         </result>
+    </action>
+
+        <action name="student_addImg" class="cn.ggs.core.action.StudentAction" method="addImg" >
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                 status,headImgFileName
+                </param>
+            </result>
+
+        </action>
+
+        <action name="student_add" class="cn.ggs.core.action.StudentAction" method="add" >
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status
+                </param>
+            </result>
+        </action>
+
+        <action name="student_update" class="cn.ggs.core.action.StudentAction" method="update" >
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status
+                </param>
+            </result>
+        </action>
+        <action name="student_importExcel" class="cn.ggs.core.action.StudentAction" method="importExcel" >
+            <!--自动封装json数据为java对象-->
+            <result name="json" type="json">
+                <param name="includeProperties">
+                    status,message
+                </param>
+            </result>
+        </action>
+
+
+
+    </package>
+</struts>
